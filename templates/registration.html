@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container form">
+       <br/><br/><br/>
+        <form action="/register" method="post">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ form.name(placeholder="name") }}
+            </div>
+            <div class="form-group">
+                {{ form.email(placeholder="email") }}
+            </div>
+            <div class="form-group">
+                {{ form.phone(placeholder="phone") }}
+            </div>
+            <div class="form-group">
+                {{ form.password(placeholder="password") }}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.register(class='btn btn-primary') }}
+            </div>
+        </form>
+    <p>Already Registered ? <a href="/login"> Sign in!</a></p>
+    </div>
+{% endblock content %}
